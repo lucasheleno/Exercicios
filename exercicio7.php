@@ -1,7 +1,7 @@
 <?php
 
-$livro = ["História", "Geografia", "Matemática"];
-$usuario = ["Professor", "Aluno"];
+$livros = ["História", "Geografia", "Matemática"];
+$usuarios = ["Carlos", "Pedro"];
 
 echo "Qual livro vai precisar? ";
 $empliv = readline();
@@ -10,6 +10,24 @@ $empuse = readline();
 
 if (is_numeric($empliv) or is_numeric($empuse)) {
     echo "Por favor inserir descrições validas!";
-} if ($empliv === "História" and $empuse === "Professor"){
-    print_r("O Usuário " . $usuario[0] . " pegou o livro de " . $livro[0]);
+}
+
+foreach ($livros as $livro) {
+    if ($livro === $empliv) {
+        $livroValidado = $livro;
+        break;
+    }
+}
+
+foreach ($usuarios as $usuario) {
+    if ($usuario === $empuse) {
+        $usuarioValidado = $usuario;
+        break;
+    }
+}
+
+if(isset($usuarioValidado) and isset($livroValidado)){
+    echo "Livro $livroValidado emprestado à $usuarioValidado! :)";
+}else{
+    echo "livro ou usuário inválido";
 }
