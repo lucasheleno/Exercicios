@@ -2,7 +2,7 @@
 
 $livros = ["História", "Geografia", "Matemática"];
 $usuarios = ["Professor", "Aluno"];
-$retornos = ["Professor"=>"10 dias","Aluno"=>"3 dias"];
+$retornos = ["Professor" => "10 dias", "Aluno" => "3 dias"];
 
 echo "Qual livro vai precisar? ";
 $empliv = readline();
@@ -28,10 +28,10 @@ foreach ($usuarios as $usuario) {
     }
 }
 
-if(isset($usuarioValidado) and isset($livroValidado)){
+if (isset($usuarioValidado) and isset($livroValidado)) {
     $dias = $retornos[$usuarioValidado];
     echo "O $usuarioValidado pegou o livro de $livroValidado e 
     tem $dias para devolver.";
-}else{
+} else {
     echo "Livro ou Usuário inválido";
 }
