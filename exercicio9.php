@@ -3,9 +3,6 @@
 echo "Quantas vezes deseja repetir a palavra SOL? " . PHP_EOL;
 $vezes = readline();
 
-$i = 0;
-
-while($i < $vezes){
+for($i = 0; $i < $vezes; $i++){
     echo "SOL".PHP_EOL;
-    $i++;
 }
