@@ -1,11 +1,11 @@
 <?php
 
 echo "Digite o número que você quer o Produto: ".PHP_EOL;
-$ini = 0;
+$ini = 1;
 $num = readline();
 
 while($ini < $num){
+    $produto = $ini * $num;
+    echo "O Produto de $ini é $produto".PHP_EOL;
     $ini++;
-    $ok = $ini * $ini;
-    echo "O Produto de $ini é $ok".PHP_EOL;
 }
